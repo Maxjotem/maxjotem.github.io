@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hasan Auto — Підбір авто</title>
+  <style>
+    :root {
+      --main-bg: #f9fafb;
+      --card-bg: #ffffffcc;
+      --accent: #0f172a;
+      --muted: #6b7280;
+      --button: #0f172a;
+      --button-hover: #1e293b;
+      --radius: 20px;
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+      color: var(--accent);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 440px;
+      width: 95%;
+      background: var(--card-bg);
+      backdrop-filter: blur(14px);
+      border-radius: var(--radius);
+      padding: 40px 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: var(--radius);
+      margin-bottom: 28px;
+      border: none;
+    }
+    .button {
+      display: block;
+      background: var(--button);
+      color: white;
+      text-decoration: none;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: var(--radius);
+      font-weight: 500;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: var(--button-hover);
+    }
+    .row-buttons {
+      display: flex;
+      gap: 10px;
+      margin: 12px 0 24px;
+    }
+    .row-buttons .button {
+      flex: 1;
+      margin: 0;
+    }
+    .footer-link {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: var(--radius);
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      text-align: left;
+    }
+    .close {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Підбір авто з доставкою по Україні 🇺🇦<br>Авто з США 🇺🇸</h1>
+
+    <iframe 
+      src="https://www.youtube.com/embed/sIX7wyUxeFY" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+
+    <a class="button" href="https://t.me/Hasan_Autobot" target="_blank">💬 Консультація Telegram</a>
+
+    <a class="button" href="https://goo.gl/maps/9pbX83mSB88e6dgbA" target="_blank">⭐ Відгуки клієнтів</a>
+
+    <div class="row-buttons">
+      <a class="button" href="https://www.youtube.com/@hasanauto" target="_blank">▶️ YouTube</a>
+      <a class="button" href="https://www.instagram.com/hasan_auto" target="_blank">📸 Instagram</a>
+    </div>
+
+    <div class="footer-link" onclick="document.getElementById('modal').style.display='flex'">
+      Договір Публічної Оферти
+    </div>
+  </div>
+
+  <div id="modal" class="modal" onclick="this.style.display='none'">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="close" onclick="document.getElementById('modal').style.display='none'">&times;</div>
+      <h2>Договір Публічної Оферти</h2>
+      <p>Текст договору — шаблон який потім заповнимо.</p>
+    </div>
+  </div>
+</body>
+</html>
