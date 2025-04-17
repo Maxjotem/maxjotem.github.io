@@ -12,6 +12,7 @@
       --muted: #6b7280;
       --button: #0f172a;
       --button-hover: #1e293b;
+      --highlight: #2563eb;
       --radius: 20px;
       --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
@@ -19,7 +20,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
       color: var(--accent);
       display: flex;
       justify-content: center;
@@ -37,14 +38,17 @@
       text-align: center;
     }
     h1 {
-      font-size: 20px;
-      margin-bottom: 24px;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      line-height: 1.4;
+      font-family: 'Segoe UI', 'Inter', sans-serif;
     }
     iframe {
       width: 100%;
-      height: 315px;
+      aspect-ratio: 16 / 9;
       border-radius: var(--radius);
-      margin-bottom: 28px;
+      margin-bottom: 18px;
       border: none;
     }
     .button {
@@ -52,20 +56,21 @@
       background: var(--button);
       color: white;
       text-decoration: none;
-      padding: 14px;
-      margin: 10px 0;
+      padding: 16px;
+      margin: 12px 0;
       border-radius: var(--radius);
-      font-weight: 500;
-      font-size: 16px;
-      transition: background 0.3s ease;
+      font-weight: 600;
+      font-size: 17px;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
     .button:hover {
       background: var(--button-hover);
+      transform: translateY(-2px);
     }
     .row-buttons {
       display: flex;
       gap: 10px;
-      margin: 12px 0 24px;
+      margin: 12px 0 20px;
     }
     .row-buttons .button {
       flex: 1;
@@ -76,6 +81,8 @@
       color: var(--muted);
       text-decoration: underline;
       cursor: pointer;
+      margin-top: 20px;
+      display: inline-block;
     }
     .modal {
       display: none;
@@ -102,26 +109,28 @@
       color: #999;
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Підбір авто з доставкою по Україні 🇺🇦<br>Авто з США 🇺🇸</h1>
+    <h1 style="font-size: 26px; letter-spacing: 0.3px; font-weight: 700;">Підбір з доставкою по Україні 🇺🇦<br>Авто з США 🇺🇸</h1>
 
     <iframe 
       src="https://www.youtube.com/embed/sIX7wyUxeFY" 
       title="YouTube video player" 
-      frameborder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>
     </iframe>
 
-    <a class="button" href="https://t.me/Hasan_Autobot" target="_blank">💬 Консультація Telegram</a>
+    <a class="button" href="https://t.me/Hasan_Autobot" target="_blank" style="background: linear-gradient(90deg, #2563eb, #1d4ed8); color: white; font-size: 18px; box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);">
+      💬 Консультація Telegram
+    </a>
 
-    <a class="button" href="https://goo.gl/maps/9pbX83mSB88e6dgbA" target="_blank">⭐ Відгуки клієнтів</a>
+    <a class="button" href="https://goo.gl/maps/9pbX83mSB88e6dgbA" target="_blank" style="transition: background 0.3s ease;">⭐ Відгуки клієнтів</a>
 
     <div class="row-buttons">
-      <a class="button" href="https://www.youtube.com/@hasanauto" target="_blank">▶️ YouTube</a>
-      <a class="button" href="https://www.instagram.com/hasan_auto" target="_blank">📸 Instagram</a>
+      <a class="button" href="https://www.youtube.com/@hasanauto" target="_blank" style="transition: background 0.3s ease;">▶️ YouTube</a>
+      <a class="button" href="https://www.instagram.com/hasan_auto" target="_blank" style="transition: background 0.3s ease;">📸 Instagram</a>
     </div>
 
     <div class="footer-link" onclick="document.getElementById('modal').style.display='flex'">
