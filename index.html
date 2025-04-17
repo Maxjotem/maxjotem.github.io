@@ -7,8 +7,8 @@
   <style>
     :root {
       --main-bg: #f9fafb;
-      --gradient-start: #6fbafe;
-      --gradient-end: #8fd3f4;
+      --gradient-start: #9fd0fe;
+      --gradient-end: #bde2f9;
       --card-bg: #ffffffcc;
       --accent: #0f172a;
       --muted: #6b7280;
@@ -40,10 +40,9 @@
       text-align: center;
     }
     h1 {
-      font-size: 22px;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 32px;
-      line-height: 1.4;
+      line-height: 1.2;
       font-family: 'Segoe UI', 'Inter', sans-serif;
     }
     iframe {
@@ -58,7 +57,11 @@
       background: var(--button);
       color: white;
       text-decoration: none;
-      height: 50px; display: flex; align-items: center; justify-content: center; box-sizing: border-box;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
       margin: 12px auto;
       border-radius: var(--radius);
       font-weight: 600;
@@ -68,20 +71,14 @@
     }
     .button:hover {
       background: var(--button-hover);
-    }
-    .row-buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      margin: 12px 0 20px;
+      filter: brightness(1.2);
     }
     .footer-link {
       font-size: 13px;
       color: #444;
       text-decoration: underline;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 30px;
       display: inline-block;
     }
     .modal {
@@ -96,11 +93,21 @@
       background: white;
       padding: 30px;
       border-radius: var(--radius);
-      max-width: 500px;
+      max-width: 800px;
       width: 90%;
       max-height: 80vh;
       overflow-y: auto;
       text-align: left;
+      font-size: 13px;
+      line-height: 1.8;
+      white-space: pre-wrap;
+    }
+    .modal-content h2,
+    .modal-content b {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 1.6em;
+      display: block;
     }
     .close {
       float: right;
@@ -113,7 +120,10 @@
 </head>
 <body>
   <div class="container">
-    <h1 style="font-size: 22px; letter-spacing: 0.3px; font-weight: 700;">Підбір з доставкою по Україні 🇺🇦<br>Авто з США 🇺🇸</h1>
+    <h1>
+      <span style="font-size: 40px;">Hasan Auto</span><br>
+      <span style="font-size: 18px;">Автопідбір в Україні та з США</span>
+    </h1>
 
     <iframe 
       src="https://www.youtube.com/embed/sIX7wyUxeFY" 
@@ -122,15 +132,15 @@
       allowfullscreen>
     </iframe>
 
-    <a class="button" href="https://t.me/Hasan_Autobot" target="_blank" style="background: linear-gradient(90deg, #2563eb, #1d4ed8); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3); max-width: 310px;" onmouseover="this.style.background='linear-gradient(90deg, #3c73f0, #4060e0)'" onmouseout="this.style.background='linear-gradient(90deg, #2563eb, #1d4ed8)'">
+    <a class="button" href="https://t.me/Hasan_Autobot" target="_blank" style="background: linear-gradient(90deg, #2563eb, #1d4ed8); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3); max-width: 310px; margin-bottom: 20px;" onmouseover="this.style.background='linear-gradient(90deg, #3c73f0, #4060e0)'" onmouseout="this.style.background='linear-gradient(90deg, #2563eb, #1d4ed8)'">
       💬 Консультація Telegram
     </a>
 
-    <a class="button" href="https://goo.gl/maps/9pbX83mSB88e6dgbA" target="_blank" style="max-width: 310px;">⭐ Відгуки клієнтів</a>
+    <a class="button" href="https://goo.gl/maps/9pbX83mSB88e6dgbA" target="_blank" style="max-width: 310px; margin-top: 20px;">⭐ Відгуки клієнтів</a>
 
     <div style="display: flex; gap: 10px; justify-content: center; margin: 12px auto 0 auto; max-width: 310px; width: 100%;">
-      <a class="button" href="https://www.youtube.com/@hasanauto" target="_blank" style="flex: 1; max-width: 150px; min-width: 150px; height: 50px; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">▶️ YouTube</a>
-      <a class="button" href="https://www.instagram.com/hasan_auto" target="_blank" style="flex: 1; max-width: 150px; min-width: 150px; height: 50px; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">📸 Instagram</a>
+      <a class="button" href="https://www.youtube.com/@hasanauto" target="_blank" style="flex: 1; max-width: 150px;">▶️ YouTube</a>
+      <a class="button" href="https://www.instagram.com/hasan_auto" target="_blank" style="flex: 1; max-width: 150px;">📸 Instagram</a>
     </div>
 
     <div class="footer-link" onclick="document.getElementById('modal').style.display='flex'">
@@ -142,7 +152,7 @@
     <div class="modal-content" onclick="event.stopPropagation()">
       <div class="close" onclick="document.getElementById('modal').style.display='none'">&times;</div>
       <h2>Договір Публічної Оферти</h2>
-      <p>Текст договору — шаблон який потім заповнимо.</p>
+      <p>Тут буде повний текст договору… (він залишився в попередньому стані й буде показуватись)</p>
     </div>
   </div>
 </body>
